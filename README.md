@@ -1,2 +1,2 @@
-# WEb
+# WEB
 Some HTML WebSites
