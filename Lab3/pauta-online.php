@@ -1,5 +1,7 @@
 <?php
 
+//$css = file_get_contents('pauta.css');
+
 $xml= simplexml_load_file('pauta.xml');
 
 $nota = 0;
