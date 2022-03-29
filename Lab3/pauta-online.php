@@ -4,29 +4,53 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <?php
-        //$xml= simplexml_load_file('C:\Users\Landeiras\Documents\GitHub\WEB\Lab3\pauta.xml'); //Torre
-        $xml= simplexml_load_file('C:\Users\luis_\OneDrive\Documentos\GitHub\WEb\Lab3\pauta.xml'); //Portátil
-
-        $nota = 0;
-
-        for($i = 0; $i<=4; $i++){
-            echo 'Número: ' .$xml->aluno[$i]->attributes()."\n";
-            echo 'Nome: ' .$xml->aluno[$i]->nome."\n";
-            echo 'Exame 1: ' .$xml->aluno[$i]->exam1."\n";
-            echo 'Exame 2: ' .$xml->aluno[$i]->exam2."\n";
-            $nota = ($xml->aluno[$i]->exam1 + $xml->aluno[$i]->exam2)/2;
-            echo 'Nota Final: ' .$nota."\n";
-            echo "\n";
-            if($nota < 9.5){
-                echo "Aluno/a reprovado/a\n";
-            }else{
-                echo "Aluno/a aprovado/a\n";
-            }
-            echo "\n";
-        }
-    ?>
+        <h2>Pauta dos Alunos</h2>
+        <div class="for">
+            <?php
+                $xml= simplexml_load_file('C:\Users\Landeiras\Documents\GitHub\WEB\Lab3\pauta.xml');
+                $nota = 0;
+                for($i = 0; $i<=4; $i++){
+                    echo 'Número: ' .$xml->aluno[$i]->attributes()."<br>";
+                    echo "<br>";
+                    echo 'Nome: ' .$xml->aluno[$i]->nome."<br>";
+                    echo "<br>";
+                    $nota = ($xml->aluno[$i]->exam1 + $xml->aluno[$i]->exam2)/2;
+            ?>
+            <table border="1">
+                <tr>
+                    <td><?php echo 'Exame 1: '?></td>
+                    <td><?php echo $xml->aluno[$i]->exam1?></td>
+                </tr>
+                <tr>
+                    <td><?php echo 'Exame 2: '?></td>
+                    <td><?php echo  $xml->aluno[$i]->exam2?></td>
+                </tr>
+                <tr>
+                    <td class="nota"><?php echo 'Nota Final: '?></td>
+                    <td class="nota"><?php echo $nota?></td>
+                </tr>
+            </table>              
+            </div>
+            <div class="reprovado">
+                <?php
+                    if($nota < 9.5){
+                        echo "Aluno/a reprovado/a<br>";
+                    }
+                ?>
+            </div>
+            <div class="aprovado">
+                <?php
+                    if($nota >=9.5){
+                        echo "Aluno/a aprovado/a<br>";
+                    }
+                ?>
+            </div>
+            <div>
+                <?php
+                    echo "<hr>";
+                }
+                ?>
+            </div>
+        </div>     
     </body>
 </html>
-
-
