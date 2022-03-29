@@ -32,6 +32,9 @@ article div p{
 article a{
     color: red; 
 }
+h2{
+    margin-left: 55%;
+}
 img{
     width: 50%;
     margin: 0;
@@ -53,6 +56,9 @@ img{
     color: #444;
     font-size: 11px;
     font-family: Helvetica;
+}
+.principal h2{
+    margin-left: 0%;
 }
 .principal img{
     width: 100%;

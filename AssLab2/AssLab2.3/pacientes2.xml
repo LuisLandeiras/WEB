@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<lista>
+<hospital>
     <paciente indentificacao="1" sexo="M">
         <nome>Miguel Antunes</nome>
         <ano>2007</ano>
@@ -16,4 +16,4 @@
         <SistemDeSaude>Médis</SistemDeSaude>
         <pediatra>Dra. Josefina Fontes</pediatra>
     </paciente>
-</lista>
+</hospital>
