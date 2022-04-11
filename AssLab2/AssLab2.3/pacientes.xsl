@@ -1,31 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:template match="/">
-  <html>
-  <body>
-      <table border="1">
-          <tr>
-              <td><h3>Identificação</h3></td>
-              <td><h3>Sexo</h3></td>
-              <td><h3>Nome</h3></td>
-              <td><h3>Ano de Nascimento</h3></td>
-              <td><h3>BI</h3></td>
-              <td><h3>Contribuinte</h3></td>
-              <td><h3>Sistema de Saúde</h3></td>
-          </tr>
-          <tr>
-            <xsl:for-each select="hospital/paciente">
-                    <td><xsl:value-of select="hospital/paciente/identificacao"/></td>
-                    <td><xsl:value-of select="hospital/paciente/sexo"/></td>
-                    <td><xsl:value-of select="hospital/paciente/nome"/></td>
-                    <td><xsl:value-of select="hospital/paciente/ano"/></td>  
-                    <td><xsl:value-of select="hospital/paciente/bi"/></td>
-                    <td><xsl:value-of select="hospital/paciente/contribuinte"/></td>
-                    <td><xsl:value-of select="hospital/paciente/SistemaDeSaude"/></td>
-            </xsl:for-each>
-          </tr>
-      </table>
-  </body>
-  </html>
-</xsl:template>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:template match="/">
+    <xsl:for-each select="hospital/paciente">
+      <xsl:if test="ano >= 2005">
+        <paciente>
+          <xsl:attribute name="indentificacao">
+            <xsl:value-of select="indentificacao"/>
+            <br></br>
+          </xsl:attribute>
+          <xsl:attribute name="sexo">
+            <xsl:value-of select="sexo"/>
+            <br></br>
+          </xsl:attribute>
+          <xsl:element name="nome">
+            <xsl:value-of select="nome"/>
+            <br></br>
+          </xsl:element>
+          <xsl:element name="ano">
+            <xsl:value-of select="ano "/>
+            <br></br>
+          </xsl:element>
+          <xsl:element name="bi">
+            <xsl:value-of select="bi"/>
+            <br></br>
+          </xsl:element>
+          <xsl:element name="contribuinte">
+            <xsl:value-of select="contribuinte"/>
+            <br></br>
+          </xsl:element>
+          <xsl:element name="SistemaDeSaude">
+            <xsl:value-of select="SistemaDeSaude"/>
+            <br></br>
+          </xsl:element>
+          <xsl:element name="Doutor">
+            <xsl:if test="sexo = 'M'"> Dr. Marcelo Pereira </xsl:if>
+            <xsl:if test="sexo = 'F'"> Dra. Josefina Fontes </xsl:if>
+          </xsl:element>
+          <br></br>
+        </paciente>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
 </xsl:stylesheet>
