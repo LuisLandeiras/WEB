@@ -1,6 +1,5 @@
-var PI = 3.1416;
 function area(a){
-    return Math.floor(PI * a * a);
+    return Math.floor(Math.PI * a * a);
 }
 function areaciclo(){
     for(var i = 2; i <= 10; i++){
@@ -9,7 +8,7 @@ function areaciclo(){
 }
 function calcarea(){
     let r = document.getElementById("radius").value;
-    document.getElementById("resultado").innerText = "Área igual:" + area(r);
+    document.getElementById("resultado").innerHTML = document.getElementById("resultado").innerHTML + area(r);
 }
 function text(){
     for (var i = 2; i <= 10; i++) {

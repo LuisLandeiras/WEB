@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>Slogans</title>
         <meta charset="UTF-8">
         <script  src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>Character Slogan</h1>
@@ -14,6 +15,15 @@
         <input type="radio" name="character" value="bart" id="bart" onclick="quote()">
         <label for="bart">Bart</label>
         <br>
-        <label id="print">Slogan:</label>
+        <input type="radio" name="character" value="captain" id="captain" onclick="quote()">
+        <label for="captain">Captain America</label>
+        <br>
+        <input type="radio" name="character" value="hulk" id="hulk" onclick="quote()">
+        <label for="hulk">Hulk</label>
+        <br>
+        <p>
+            Slogan:
+            <span id="print"><span></span></span>
+        </p>
     </body>
 </html>
