@@ -9,18 +9,21 @@ function quote(){
     if(bart.checked){
         document.getElementById("print").innerHTML = " ";
         document.getElementById("print").innerHTML = document.getElementById("print").innerHTML + catchphrase[0];
-
+        console.log("Ay Caramba!");
     }
     if(homer.checked){
         document.getElementById("print").innerHTML = " ";
         document.getElementById("print").innerHTML = document.getElementById("print").innerHTML + catchphrase[1];
+        console.log("D'Oh!");
     }
     if(captain.checked){
         document.getElementById("print").innerHTML = " ";
         document.getElementById("print").innerHTML = document.getElementById("print").innerHTML + catchphrase[2];
+        console.log("Avengers Assemble!");
     }
     if(hulk.checked){
         document.getElementById("print").innerHTML = " ";
         document.getElementById("print").innerHTML = document.getElementById("print").innerHTML + catchphrase[3];
+        console.log("Hulk Smash!");
     }
 }
