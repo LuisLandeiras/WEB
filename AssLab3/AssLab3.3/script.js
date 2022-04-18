@@ -8,7 +8,7 @@ function areaciclo(){
 }
 function calcarea(){
     let r = document.getElementById("radius").value;
-    document.getElementById("resultado").innerHTML = document.getElementById("resultado").innerHTML + area(r);
+    document.getElementById("resultado").innerText = "Área: " + area(r);
 }
 
 let list = ["2 -> 12", "3 -> 28", "4 -> 50", "5 -> 78", "6 -> 113", "7 -> 153", "8 -> 201", "9 -> 254", "10 -> 314"];

@@ -2,9 +2,8 @@ function registar(){
     let numero = prompt("Introduza o número de registos");
     let registo = [];
     for(let i = 0; i < numero; i++){
-        let nome = prompt("Introduza o nome");
         let idade = prompt("Introduza a idade");
-        let registo1 = {nome, idade: parseInt(idade)};
+        let registo1 = {idade: parseInt(idade)};
         registo.push(registo1);
     }
 
@@ -26,11 +25,8 @@ function registar(){
     }
     let media = aux / registo.length;
 
-    document.getElementById("participantes").innerHTML = document.getElementById("participantes").innerHTML + registo.length;
-    document.getElementById("media").innerHTML = document.getElementById("media").innerHTML + media;
-    document.getElementById("minimo").innerHTML = document.getElementById("minimo").innerHTML + menor;
-    document.getElementById("maximo").innerHTML = document.getElementById("maximo").innerHTML + maior;
-    
-    
-    
+    document.getElementById("participantes").innerHTML = "Nº de Participantes: " + registo.length;
+    document.getElementById("media").innerHTML = "Média de Idades: " + media;
+    document.getElementById("minimo").innerHTML = "Idade Mínima: " + menor;
+    document.getElementById("maximo").innerHTML = "Idade Máxima: " + maior;   
 }
