@@ -4,12 +4,15 @@ var createdTime = 0;
 
 
 function randomshape(){
-    var shape = ["circle","square","triangle","rectangle"];
+    var shape = ["circle","square"];
     var codShape;
     codShape = Math.random();
-    codShape = Math.floor(codShape*4);
-    document.getElementById("divbox").style.borderRadius = shape[codShape];
-
+    codShape = Math.floor(codShape*2);
+    if(shape[codShape] == "circle"){
+        document.getElementById("divbox").style.borderRadius = "0%";
+    }else{
+        document.getElementById("divbox").style.borderRadius = "100%";
+    }
     var color = ["red","blue","green","yellow","orange","purple","pink","black"];
     var codColor;
     codColor = Math.random();
