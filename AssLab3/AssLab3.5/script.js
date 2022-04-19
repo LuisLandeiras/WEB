@@ -35,8 +35,10 @@ function clicked(){
     var timeDifference = (clickedTime - createdTime) / 1000;
     if(timeDifference < reactionTime) {
         reactionTime = timeDifference;
+        alert("Parabéns, você conseguiu um novo recorde de " + reactionTime + " segundos!");
+    } else{
+        document.getElementById("recordTime").innerHTML = reactionTime;
     }
     document.getElementById("reactionTime").innerHTML = timeDifference;
-    document.getElementById("recordTime").innerHTML = reactionTime;
     clickedTime = 0; 
 }
