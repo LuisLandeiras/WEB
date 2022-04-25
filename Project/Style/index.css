@@ -1,0 +1,13 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.menu li{
+    line-height: 25px;
+    display:inline; 
+    list-style-type: none; 
+    color: white;
+}
+.menu li a{
+    text-decoration: none;
+    color: black;
+}
