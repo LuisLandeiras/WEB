@@ -7,7 +7,7 @@
     </head>
     <body>
         <nav class="navbar">
-            <a href="index.html" class="logo">YourCloud</a>
+            <a href="index.html" id="logo">YourCloud</a>
             <input type="checkbox" id="toggler">
             <label for="toggler"><i class="ri-menu-line"></i></label>
             <div class="menu">
@@ -20,44 +20,47 @@
         </nav>
         <br>
         <h2>Nossos serviços:</h2>
-        <div class="produtos">
-            <ul class="list">
-                <li>Suporte a todo o tipo de ficheiros</li>
-                <li>Privacidade e segurança garantida</li>
-                <li>Uma quantidade minima garantida de armazenamento por cada utilizador</li>
-            </ul>
+        <div class="conteudo">
+            <div class="produtos">
+                <ul class="list">
+                    <li>Suporte a todo o tipo de ficheiros</li>
+                    <li>Privacidade e segurança garantida</li>
+                    <li>Uma quantidade minima garantida de armazenamento por cada utilizador</li>
+                </ul>
+            </div>
+            <form action="">
+                <h3>Registo:</h3>
+                <label>Primeiro Nome:</label>
+                <br>
+                <input type="text">
+                <br>
+                <p></p>
+                <label>Apelido:</label>
+                <br>
+                <input type="text">
+                <br>
+                <p></p>
+                <label>Email:</label>
+                <br>
+                <input type="email">
+                <br>
+                <p></p>
+                <label>Password:</label>
+                <br>
+                <input type="password" minlength="8" id="pass">
+                <br>
+                <p></p>
+                <label>Repita a Password:</label>
+                <br>
+                <input type="password" id="repitepass">   
+                <br>
+                <p></p>
+                <input type="submit" id="submit" value="Registar" onclick="equal()">
+                <input type="reset" id="reset" value="Limpar">
+                <p id="ou">Ou</p>
+                <a href="login.html" id="login">Faça login</a>
+            </form>
         </div>
-        <form action="">
-            <label>Primeiro Nome:</label>
-            <br>
-            <input type="text">
-            <br>
-            <p></p>
-            <label>Apelido:</label>
-            <br>
-            <input type="text">
-            <br>
-            <p></p>
-            <label>Email:</label>
-            <br>
-            <input type="email">
-            <br>
-            <p></p>
-            <label>Password:</label>
-            <br>
-            <input type="password" minlength="8" id="pass">
-            <br>
-            <p></p>
-            <label>Repita a Password:</label>
-            <br>
-            <input type="password" id="repitepass">   
-            <br>
-            <p></p>
-            <input type="submit" id="submit" value="Registar" onclick="equal()">
-            <input type="reset" id="reset" value="Limpar">
-            <p id="ou">Ou</p>
-            <a href="login.html" id="login">Faça login</a>
-        </form>
         <footer>
             <p>YourCloud</p>
         </footer>
