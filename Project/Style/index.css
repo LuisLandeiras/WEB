@@ -105,17 +105,22 @@ form h2{
     transform: scaleX(1);
 }
 #logo{
-    background-color: #F2F2F2;
+    background-color: #6D0875;
     margin-right: 50px;
     display: inline-block;
     text-decoration: none;
     letter-spacing: 2px;
-    color: #0E0E0E;
-    outline: 1px solid #0E0E0E;
+    color: #F2F2F2;
+    outline: 2px solid #F2F2F2;
     padding: 20px 50px;
     position: relative;
     overflow: hidden;
     transition: color 1s;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+#logo:hover{
+    color: #6D0875;
+    background-color: #F2F2F2;
+    outline: 2px solid #0E0E0E;
 }
