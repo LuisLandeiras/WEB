@@ -27,7 +27,24 @@
 
 
 <p>Etiam et cursus quam. Phasellus ornare felis sed magna luctus nec pellentesque lacus tincidunt. Ut mauris eros, fringilla id placerat ac, pulvinar ut quam. Praesent eu diam nec magna volutpat semper vel nec neque. Aenean rhoncus commodo erat, a ultrices lorem pretium nec. Phasellus nunc tellus, suscipit sit amet dictum sed, sodales ut odio.</p>
+<script>
+	let imageIndex = 0;
 
+	$(document).ready(function() {
+		//Espera o load do document e carrega a função
+		$('.fadeitem').hide();
+		$('.fadeitem').eq(imageIndex).show();
+
+		$('#viewer').on('click', function() {
+			$('.fadeitem').eq(imageIndex).fadeOut();
+			imageIndex++;
+			if (imageIndex >= $('.fadeitem').length) {
+				imageIndex = 0;
+			}
+			$('.fadeitem').eq(imageIndex).fadeIn();
+		});
+	});
+</script>
 </div>
 </body>
 </html>
