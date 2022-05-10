@@ -37,6 +37,7 @@
           </xsl:element>
           <br></br>
         </paciente>
+        <br></br>
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
