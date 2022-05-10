@@ -1,31 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8">
-  <title>Hello!</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-(function ($) {
-    $(document).ready(function() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                function (position) {
-                    var lat = position.coords.latitude;
-                    var lng = position.coords.longitude;
-                    $("#banner").load("index.php?lat="+lat+"&lng="+lng);
-                },
-                function (error) {
-                    console.log("An error occurred obtaining position.");
-                });
+<head>
+    <meta charset="UTF-8">
+    <title>IP</title>
+</head>
+<body>
+    <script type="application/javascript">
+        function getIP(json) {
+          document.write("O seu ip publico é: ", json.ip);
         }
-        else {
-            $("#banner").html("Default content goes here"); 
-        }
-    });
-})(jQuery);
-  </script>
- </head>
- <body>
-  <div id="banner"></div>
- </body>
+      </script>
+      
+      <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+</body>
 </html>
