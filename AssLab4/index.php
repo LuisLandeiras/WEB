@@ -4,12 +4,12 @@ require "Geonames.php";
 $lat = floatval($_GET["lat"]);
 $lng = floatval($_GET["lng"]);
 
-$geo = new Geonames("username");
-$prompt = "Find cinema listings near you";
+$geo = new Geonames("landeiras");
+$prompt = "Localização mais próxima: ";
 try {
     $place = $geo->getPlaceName($lat, $lng);
     if ($place != "Unknown") {
-        $prompt .= " in " . $place;
+        $prompt .= $place;
     }
 }
 catch (Exception $e) {
