@@ -15,8 +15,8 @@
         echo "Welcome to the first time!";
     }
     else{
-        $_SESSION['visit_count']++;
-        echo "Welcome back! You have visited this page $visit_count times.";
+       $num = $_SESSION['visit_count']++;
+        echo "Welcome back! You have visited this page $num times.";
     }
     $self_url = $_SERVER['PHP_SELF'];
     $session_id = SID;
